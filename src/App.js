@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Description from './components/Description';
+import Name from './components/Name';
+import Navigbar from './components/Navigbar';
+import {Card, Button} from 'react-bootstrap';
+import Price from './components/Price';
+import ProdImg from './components/ProdImg';
+import profile from './assets/profile.png';
+
 
 function App() {
+  const firstName = "Yahia"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigbar/>
+      <h1>Checkpoint React JS</h1>
+      {/* *******************************
+       */}
+       <Card style={{ width: '18rem', margin: 'auto'}}>
+      <ProdImg/>
+      <Card.Body>
+        <Name/>
+        <Price/>
+        <Card.Text>
+          <Description/>
+        </Card.Text>
+        <Button variant="primary">Check it out</Button>
+      </Card.Body>
+    </Card>
+    <h2> {firstName? `Hello ${firstName}`: 'Hello there !'} </h2>
+    {firstName && <img src={profile} alt='Pic'/>}
     </div>
   );
 }
