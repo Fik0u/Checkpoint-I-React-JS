@@ -1,3 +1,19 @@
+body{
+  background-image: url('https://images.hdqwalls.com/wallpapers/playstation-background-image-yu.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
 .App {
+  display: block;
   text-align: center;
+  height: 100vh;
+}
+
+.greetings{
+  display: block;
+  text-align: center;
+}
+.greetings img{
+  width: 200px;
+  height: 200px;
 }

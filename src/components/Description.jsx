@@ -1,8 +1,10 @@
 import React from 'react'
 import product from '../product'
+
+//Description component
 const Description = () => {
   return (
-    <div>
+    <div style={{fontWeight:300}}>
       {product.description}
     </div>
   )
